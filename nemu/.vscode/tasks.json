@@ -1,0 +1,83 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make run",
+            "type": "shell",
+            "command": "make ISA=x86 run",
+            "args": [],
+			"options": {
+				"cwd": ""
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher":[]
+        },
+        {
+            "label": "make gdb",
+            "type": "shell",
+            "command": "make ISA=x86 gdb",
+            "args": [],
+			"options": {
+				"cwd": ""
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher":[]
+		},
+		{
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+			"options": {
+				"cwd": ""
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher":[]
+		},
+		{
+            "label": "make clean",
+            "type": "shell",
+            "command": "make clean",
+            "args": [],
+			"options": {
+				"cwd": ""
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher":[]
+        },
+    ]
+}

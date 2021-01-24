@@ -1,0 +1,179 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "make run",
+			"type": "shell",
+			"command": "make ISA=x86 run",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make gdb",
+			"type": "shell",
+			"command": "make ISA=x86 gdb",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make",
+			"type": "shell",
+			"command": "make",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make clean",
+			"type": "shell",
+			"command": "make clean",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "make ARCH=x86-nemu run",
+			"command": "make ARCH=x86-nemu update&&make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "update .ramdisk.img",
+			"command": "gcc -MMD -I/home/zhaochaoyi/ics2020/nanos-lite/include -I/home/zhaochaoyi/ics2020/abstract-machine/am/include/ -I/home/zhaochaoyi/ics2020/abstract-machine/klib/include/ -m32 -fno-pic -c -o /home/zhaochaoyi/ics2020/nanos-lite/build/x86-nemu/./src/resources.o /home/zhaochaoyi/ics2020/nanos-lite/src/resources.S",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "x86-nemu nanos-lite run",
+			"command": "make clean&&cd /home/zhaochaoyi/ics2020/nanos-lite&&make clean&&make ARCH=x86-nemu update&&make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "navy-apps/"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "only run",
+			"command": "make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "native nanos-lite run",
+			"command": "make clean&&cd /home/zhaochaoyi/ics2020/nanos-lite&&make clean&&make ARCH=native update&&make ARCH=native run",
+			"args": [],
+			"options": {
+				"cwd": "navy-apps/"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		
+	]
+}
