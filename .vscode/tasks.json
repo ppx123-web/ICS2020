@@ -1,0 +1,197 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "make run",
+			"type": "shell",
+			"command": "make ISA=x86 run",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make gdb",
+			"type": "shell",
+			"command": "make ISA=x86 gdb",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make",
+			"type": "shell",
+			"command": "make",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "make clean",
+			"type": "shell",
+			"command": "make clean",
+			"args": [],
+			"options": {
+				"cwd": "nemu"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "make ARCH=x86-nemu run",
+			"command": "make ARCH=x86-nemu update&&make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "make VME = 1",
+			"command": "make ARCH=x86-nemu VME=1 update&&make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "x86-nemu nanos-lite run",
+			"command": "make clean&&cd /home/zhaochaoyi/ics2020/nanos-lite&&make clean&&make ARCH=x86-nemu update&&make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "navy-apps/"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "only run",
+			"command": "make ARCH=x86-nemu run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "native nanos-lite run",
+			"command": "make ARCH=native run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "native VME=1 nanos-lite run",
+			"command": "make ARCH=native VME=1 update&&make ARCH=native run",
+			"args": [],
+			"options": {
+				"cwd": "nanos-lite"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"group": "build",
+			"problemMatcher": []
+		}
+	]
+}
