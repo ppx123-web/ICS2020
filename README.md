@@ -1,4 +1,4 @@
-# ICS2020 匡院 & AI PA
+# ICS2020 NJU 匡院 & AI PA
 
 # ICS2020 Programming Assignment
 
