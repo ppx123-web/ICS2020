@@ -1,5 +1,4 @@
 # ICS2020 匡院 & AI（jyy） PA
-    已全部完成，不过在PA4分页后native无法运行，同时SDL有点小问题，不过并不影响使用
 
 # ICS2020 Programming Assignment
 
