@@ -1,5 +1,7 @@
 # ICS2020 NJU 匡院 & AI PA
 
+##Attention: There is a problem which affects the beginning of PAL in lib:miniSDL, but it doesn't matter.
+
 # ICS2020 Programming Assignment
 
 This project is the programming assignment of the class ICS(Introduction to Computer System)
